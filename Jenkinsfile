@@ -10,13 +10,13 @@ node {
     bat "java -version"
 
     stage 'test'
-    sh "mvn test"
+    bat "mvn test"
 
     stage 'package'
-    sh "mvn package"
+    bat "mvn package"
 
     stage 'preview'
-    sh 'make deploy-default'
+    bat 'make deploy-default'
 
     stage 'report'
     step([$class: 'JUnitResultArchiver', testResults: '**/target/surefire-reports/TEST-*.xml'])
