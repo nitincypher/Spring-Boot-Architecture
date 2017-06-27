@@ -6,8 +6,8 @@ node {
 
     stage 'check env'
 
-    sh "mvn -v"
-    sh "java -version"
+    bat "mvn -v"
+    bat "java -version"
 
     stage 'test'
     sh "mvn test"
